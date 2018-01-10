@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import reducer from './reducers';
 import TabContainer from './components/TabContainer';
 import StatusBarFlash from './components/StatusBarFlash';
+import styles from './styles';
 
 export default class App extends Component {
   render() {
@@ -18,11 +19,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-  },
-});
