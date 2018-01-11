@@ -1,10 +1,19 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { connect } from 'react-redux';
 
-const DeckList = () => (
+const DeckList = ({decks}) => (
   <View>
-    <Text>Deck List</Text>
+    <Text>{JSON.stringify(decks)}</Text>
   </View>
 );
 
-export default DeckList;
+const mapStateToProps = (state, ownState) => ({
+  decks: state.decks
+});
+
+const mapDispatchToProps = dispatch => ({
+  save: title => dispatch(saveDeckTitle(title))
+});
+
+export default connect(mapStateToProps)(DeckList);
