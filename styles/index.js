@@ -16,6 +16,23 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
+  subTitle: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  subCopy: {
+    color: 'gray',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  listDeck: {
+    borderColor: '#000',
+    borderBottomWidth: 2,
+    paddingBottom: 40,
+    paddingTop: 40
+  },
   btn: {
     borderColor: '#000',
     borderRadius: 7,
