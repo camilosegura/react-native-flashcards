@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../styles';
+import { CARDS } from '../utils/constants';
 
 class DeckList extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class DeckList extends Component {
       <TouchableOpacity style={styles.listDeck}
         onPress={ this.goToView.bind(this, item.title) }>
         <Text style={ styles.subTitle } >{ item.title }</Text>
-        <Text style={ styles.subCopy }>{ item.questions.length } cards</Text>
+        <Text style={ styles.subCopy }>{ item.questions.length } { CARDS }</Text>
       </TouchableOpacity>
     )
   }
@@ -49,9 +50,5 @@ const mapStateToProps = (state, ownState) => {
     decks
   }
 };
-
-const mapDispatchToProps = dispatch => ({
-  save: title => dispatch(saveDeckTitle(title))
-});
 
 export default connect(mapStateToProps)(DeckList);
