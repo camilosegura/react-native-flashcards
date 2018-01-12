@@ -21,6 +21,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center'
   },
+  copy: {
+    color: 'gray',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
   subCopy: {
     color: 'gray',
     fontSize: 20,
@@ -36,10 +42,7 @@ const styles = StyleSheet.create({
   btn: {
     borderColor: '#000',
     borderRadius: 7,
-    borderBottomWidth: 2,
-    borderLeftWidth: 3,
-    borderRightWidth: 3,
-    borderTopWidth: 2,
+    borderWidth: 1,
     marginTop: 20,
     paddingBottom: 7,
     paddingLeft: 17,
@@ -49,8 +52,14 @@ const styles = StyleSheet.create({
   btnBlack: {
     backgroundColor: 'black',
   },
+  btnWhite: {
+    backgroundColor: 'white',
+  },
   txtWhite: {
     color: 'white'
+  },
+  txtBlack: {
+    color: 'black'
   },
   input: {
     height: 40,

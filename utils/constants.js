@@ -1,5 +1,6 @@
-export const ADD_DECK = 'ADD_DECK';
-export const ADD_CARD = 'ADD_CARD';
+export const START_QUIZ = 'Start Quiz';
+export const ADD_CARD = 'Add Card';
+export const CARDS = 'Cards';
 export const STORE_DECK = 'STORE_DECK';
 export const GET_DECKS = 'GET_DECKS';
 export const GET_DECK = 'GET_DECK';
