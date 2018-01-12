@@ -25,10 +25,10 @@ export const saveDeckTitle = (title) => {
   }
 };
 
-export const addCardToDeck = (id, card) => {
+export const addCardToDeck = (title, card) => {
   return {
     type: ADD_CARD_TO_DECK,
-    id,
+    title,
     card
   }
 };
