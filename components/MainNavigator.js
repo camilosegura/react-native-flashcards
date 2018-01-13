@@ -21,7 +21,7 @@ const MainNavigator = StackNavigator({
   CardAdd: {
     screen: CardAdd,
     navigationOptions: ({ navigation }) => ({
-      title: 'sss',
+      title: ADD_CARD,
       headerTintColor: 'white',
       headerStyle: {
         backgroundColor: 'black',
