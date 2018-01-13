@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { saveDeckTitle } from '../actions';
-import { NEW_DECK_TITLE, SUBMIT } from '../utils/copy';
+import { NEW_DECK_TITLE, SUBMIT } from '../utils/constants';
 import styles from '../styles';
 
 class DeckAdd extends Component {
