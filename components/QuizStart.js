@@ -64,7 +64,8 @@ class QuizStart extends Component {
       this.props.navigation.navigate(
         'QuizEnd',
         {
-          correctCount: this.state.correctCount
+          correctCount: this.state.correctCount,
+          title: this.props.navigation.state.params.title
         }
       )
 

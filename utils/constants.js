@@ -9,6 +9,12 @@ export const QUIZ = 'Quiz';
 export const NO_CARDS = 'This Deck has not cards, please add cards';
 export const CORRECT = 'Correct';
 export const INCORRECT = 'Incorrect';
+export const QUIZ_FINISHED = 'Quiz Finished';
+export const CORRECT_ANSWERS = 'Your correct answers were';
+export const RESTART_QUIZ = 'Restart Quiz';
+export const BACK_DECK = 'Back to Deck';
+export const NO_DECKS = 'There are not Decks';
+export const ADD_DECK = 'Add Deck';
 
 export const STORE_DECK = 'STORE_DECK';
 export const GET_DECKS = 'GET_DECKS';

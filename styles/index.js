@@ -49,6 +49,9 @@ const styles = StyleSheet.create({
     paddingRight: 17,
     paddingTop: 7,
   },
+  btnGray: {
+    backgroundColor: 'gray',
+  },
   btnBlack: {
     backgroundColor: 'black',
   },
