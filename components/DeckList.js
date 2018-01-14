@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import styles from '../styles';
-import { CARDS } from '../utils/constants';
+import { CARDS, NO_DECKS, ADD_DECK } from '../utils/constants';
 
 class DeckList extends Component {
   constructor(props) {
@@ -29,15 +29,25 @@ class DeckList extends Component {
   }
 
   render() {
-    return (
-      <View>
-        <FlatList
-          data={ this.props.decks }
-          renderItem={ this.DeckView }
-          keyExtractor={(item, index) => index}
-        />
-      </View>
-    )
+    if (this.props.decks.length) {
+      return (
+        <View>
+          <FlatList
+            data={ this.props.decks }
+            renderItem={ this.DeckView }
+            keyExtractor={(item, index) => index}
+          />
+        </View>
+      )
+    } else {
+      return (
+        <View style={ styles.component }>
+          <Text style={ styles.title }>
+            { NO_DECKS }
+          </Text>
+        </View>
+      )
+    }
   }
 }
 
