@@ -5,9 +5,14 @@ import configureStore from './utils/store';
 import MainNavigator from './components/MainNavigator';
 import StatusBarFlash from './components/StatusBarFlash';
 import styles from './styles';
+import { setLocalNotification } from './utils/notifications';
 
 
 export default class App extends Component {
+  componentDidMount() {
+    setLocalNotification();
+  }
+
   render() {
     return (
       <Provider store={configureStore()} >

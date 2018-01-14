@@ -6,9 +6,14 @@ import {
 } from 'react-native';
 import { QUIZ_FINISHED, CORRECT_ANSWERS, RESTART_QUIZ, BACK_DECK } from '../utils/constants';
 import styles from '../styles';
+import { clearLocalNotification, setLocalNotification } from '../utils/notifications';
 
 const QuizEnd = ({navigation}) => {
   const { title, correctCount } = navigation.state.params;
+
+  clearLocalNotification()
+    .then(setLocalNotification);
+
   return (
     <View style={ styles.component }>
       <Text style={ styles.title } >
