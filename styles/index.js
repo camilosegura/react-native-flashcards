@@ -55,6 +55,12 @@ const styles = StyleSheet.create({
   btnWhite: {
     backgroundColor: 'white',
   },
+  btnRed: {
+    backgroundColor: '#C4392A'
+  },
+  btnGreen: {
+    backgroundColor: '#377D22'
+  },
   txtWhite: {
     color: 'white'
   },
@@ -68,6 +74,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 20,
     width: 300
+  },
+  flip: {
+    color: '#C4392A'
   }
 });
 

@@ -16,7 +16,12 @@ const DeckView = ({navigation, deck}) => (
     ) }>
       <Text style={ styles.txtBlack }>{ ADD_CARD }</Text>
     </TouchableOpacity>
-    <TouchableOpacity style={ [styles.btn, styles.btnBlack] } onPress={ ()=> {} }>
+    <TouchableOpacity style={ [styles.btn, styles.btnBlack] } onPress={ ()=> navigation.navigate(
+      'QuizStart',
+      {
+        title: deck.title
+      }
+    ) }>
       <Text style={ styles.txtWhite }>{ START_QUIZ }</Text>
     </TouchableOpacity>
   </View>

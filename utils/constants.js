@@ -5,6 +5,10 @@ export const QUESTION = 'Question';
 export const ANSWER = 'Answer';
 export const NEW_DECK_TITLE = 'What is the title of your new deck?';
 export const SUBMIT = 'Submit';
+export const QUIZ = 'Quiz';
+export const NO_CARDS = 'This Deck has not cards, please add cards';
+export const CORRECT = 'Correct';
+export const INCORRECT = 'Incorrect';
 
 export const STORE_DECK = 'STORE_DECK';
 export const GET_DECKS = 'GET_DECKS';
