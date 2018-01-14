@@ -22,8 +22,14 @@ class DeckAdd extends Component {
   }
 
   onSave() {
-    this.props.save(this.state.title);
+    const { title } = this.state;
+    this.props.save(title);
     this.setState({title: ''});
+
+    this.props.navigation.navigate(
+      'DeckView',
+      { title }
+    )
   }
 
   render() {
