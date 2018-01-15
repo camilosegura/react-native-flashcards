@@ -1,9 +1,16 @@
 import { StyleSheet } from 'react-native'
+import {
+  gray,
+  white,
+  red,
+  green,
+  black
+ } from '../utils/colors';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: white,
 
   },
   component: {
@@ -22,25 +29,25 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   copy: {
-    color: 'gray',
+    color: gray,
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center'
   },
   subCopy: {
-    color: 'gray',
+    color: gray,
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center'
   },
   listDeck: {
-    borderColor: '#000',
+    borderColor: black,
     borderBottomWidth: 2,
     paddingBottom: 40,
     paddingTop: 40
   },
   btn: {
-    borderColor: '#000',
+    borderColor: black,
     borderRadius: 7,
     borderWidth: 1,
     marginTop: 20,
@@ -50,36 +57,36 @@ const styles = StyleSheet.create({
     paddingTop: 7,
   },
   btnGray: {
-    backgroundColor: 'gray',
+    backgroundColor: gray,
   },
   btnBlack: {
-    backgroundColor: 'black',
+    backgroundColor: black,
   },
   btnWhite: {
-    backgroundColor: 'white',
+    backgroundColor: white,
   },
   btnRed: {
-    backgroundColor: '#C4392A'
+    backgroundColor: red
   },
   btnGreen: {
-    backgroundColor: '#377D22'
+    backgroundColor: green
   },
   txtWhite: {
-    color: 'white'
+    color: white
   },
   txtBlack: {
-    color: 'black'
+    color: black
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: gray,
     borderRadius: 7,
     borderWidth: 1,
     marginTop: 20,
     width: 300
   },
   flip: {
-    color: '#C4392A'
+    color: red
   }
 });
 

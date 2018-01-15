@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 import { AsyncStorage } from 'react-native';
 import reducer from '../reducers';
-import { STORE_DECK } from './constants';
+import { STORE_DECK } from '../actions/types';
 
 const configureStore = () => {
   const store = createStore(reducer);

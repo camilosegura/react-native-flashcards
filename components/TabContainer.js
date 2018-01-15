@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabNavigator } from 'react-navigation';
 import { Ionicons } from '@expo/vector-icons'
-import { white, black } from '../utils/colors';
+import { white, black, gray } from '../utils/colors';
 import DeckList from './DeckList';
 import DeckAdd from './DeckAdd';
 
@@ -26,6 +26,7 @@ const Tabs = TabNavigator({
   },
   tabBarOptions: {
     activeTintColor: black,
+    inactiveTintColor: gray,
     style: {
       height: 56,
       backgroundColor: white,

@@ -3,7 +3,7 @@ import {
   GET_DECKS,
   SAVE_DECK_TITLE,
   ADD_CARD_TO_DECK
-} from '../utils/constants';
+} from './types';
 
 export const getDecks = () => {
   return {

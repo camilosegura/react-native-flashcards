@@ -6,9 +6,13 @@ This is React nano degree third project.
 
 Type in a terminal `yarn install` and `yarn start`.
 
+## Expo
+
+This app use [Expo](https://expo.io/learn)
+
 ## Tested Device
 
-Tested on iPhone 6 device.
+Tested on iPhone 6 device and Android SDK 27
 
 ## License
 MIT
