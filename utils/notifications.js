@@ -13,6 +13,12 @@ const createNotification = () => {
     body: "👋 don't forget to do your quizzes today!",
     ios: {
       sound: true,
+    },
+    android: {
+      sound: true,
+      priority: 'high',
+      sticky: false,
+      vibrate: true,
     }
   }
 }

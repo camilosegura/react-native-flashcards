@@ -8,7 +8,8 @@ class DeckList extends Component {
   constructor(props) {
     super(props);
 
-    this.DeckView = this.DeckView.bind(this);
+    this.deckView = this.deckView.bind(this);
+    this.list = this.list.bind(this);
   }
 
   goToView(title) {
@@ -18,7 +19,7 @@ class DeckList extends Component {
     )
   }
 
-  DeckView({ item }) {
+  deckView({ item }) {
     return (
       <TouchableOpacity style={styles.listDeck}
         onPress={ this.goToView.bind(this, item.title) }>
@@ -28,13 +29,13 @@ class DeckList extends Component {
     )
   }
 
-  render() {
+  list() {
     if (this.props.decks.length) {
       return (
         <View>
           <FlatList
             data={ this.props.decks }
-            renderItem={ this.DeckView }
+            renderItem={ this.deckView }
             keyExtractor={(item, index) => index}
           />
         </View>
@@ -49,9 +50,13 @@ class DeckList extends Component {
       )
     }
   }
+
+  render() {
+    return this.list();
+  }
 }
 
-const mapStateToProps = (state, ownState) => {
+const mapStateToProps = (state) => {
   const decks = [];
   for (let key in state.decks) {
     decks.push(state.decks[key]);

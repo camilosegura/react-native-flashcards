@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  KeyboardAvoidingView
 } from 'react-native';
 import { connect } from 'react-redux';
 import { addCardToDeck } from '../actions';
@@ -44,7 +45,9 @@ class CardAdd extends Component {
     const { question, answer } = this.state;
 
     return (
-      <View style={ styles.component }>
+      <KeyboardAvoidingView
+        style={ styles.component }
+        behavior="padding">
         <TextInput style={ styles.input }
           onChangeText={ question => this.setState({ question }) }
           value={ question }
@@ -57,7 +60,7 @@ class CardAdd extends Component {
         <TouchableOpacity style={ [styles.btn, styles.btnBlack] } onPress={ this.onSave }>
           <Text style={ styles.txtWhite }>{ SUBMIT }</Text>
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 }

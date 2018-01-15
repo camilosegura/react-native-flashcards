@@ -3,7 +3,8 @@ import {
   View,
   Text,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  KeyboardAvoidingView
 } from 'react-native';
 import { connect } from 'react-redux';
 import { saveDeckTitle } from '../actions';
@@ -34,7 +35,9 @@ class DeckAdd extends Component {
 
   render() {
     return (
-      <View style={ styles.component }>
+      <KeyboardAvoidingView
+        style={ styles.component }
+        behavior="padding">
         <Text style={ styles.title } >{ NEW_DECK_TITLE }</Text>
         <TextInput style={ styles.input }
           onChangeText={(title) => this.setState({title})}
@@ -42,17 +45,13 @@ class DeckAdd extends Component {
         <TouchableOpacity style={ [styles.btn, styles.btnBlack] } onPress={ this.onSave }>
           <Text style={ styles.txtWhite }>{ SUBMIT }</Text>
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 }
-
-const mapStateToProps = (state, ownState) => ({
-
-});
 
 const mapDispatchToProps = dispatch => ({
   save: title => dispatch(saveDeckTitle(title))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DeckAdd);
+export default connect(null, mapDispatchToProps)(DeckAdd);

@@ -65,7 +65,8 @@ class QuizStart extends Component {
         'QuizEnd',
         {
           correctCount: this.state.correctCount,
-          title: this.props.navigation.state.params.title
+          title: this.props.navigation.state.params.title,
+          totalQuestions: this.state.totalQuestions
         }
       )
 

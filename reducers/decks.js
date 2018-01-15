@@ -1,4 +1,4 @@
-import { SAVE_DECK_TITLE, ADD_CARD_TO_DECK } from '../utils/constants';
+import { SAVE_DECK_TITLE, ADD_CARD_TO_DECK } from '../actions/types';
 
 function decks (state = {}, action) {
   const { type, title, card } = action;

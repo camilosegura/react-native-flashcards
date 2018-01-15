@@ -9,7 +9,7 @@ import styles from '../styles';
 import { clearLocalNotification, setLocalNotification } from '../utils/notifications';
 
 const QuizEnd = ({navigation}) => {
-  const { title, correctCount } = navigation.state.params;
+  const { title, correctCount, totalQuestions } = navigation.state.params;
 
   clearLocalNotification()
     .then(setLocalNotification);
@@ -20,7 +20,7 @@ const QuizEnd = ({navigation}) => {
         { QUIZ_FINISHED }
       </Text>
       <Text style={ styles.copy } >
-        { CORRECT_ANSWERS } { correctCount }
+        { CORRECT_ANSWERS } { correctCount }/{ totalQuestions }
       </Text>
       <TouchableOpacity style={ [styles.btn, styles.btnGray] }
         onPress={ ()=> navigation.navigate(
